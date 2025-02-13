@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Supermercado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+    <main class="presentacion__listado">
+        <h1 class="presentacion__listado__titulo">Tu lista para las compras</h1>
+        
+        <div class="notepad__inputs">
+            <section class="input__section">
+                <div class="input__section__wrapper">
+                    <input type="text" id="categoria" class="input__section__box" placeholder="Ingrese la Categoria">
+                    <button onclick="crearCategoria()" id="boton-categoria" class="input__section__button">Crear Categoría</button>
+                </div>
+                <div class="input__section__wrapper">
+                    <input type="text" id="prod_categoria" class="input__section__box" placeholder="Ingrese la Categoria">
+                    <input type="text" id="prod_producto" class="input__section__box" placeholder="Ingrese el Producto">
+                    <input type="text" id="prod_cantidad" class="input__section__box" placeholder="Ingrese la Cantidad">
+                    <button onclick="agregarProducto()" class="input__section__button">Agregar Producto</button>
+                </div>
+                <div class="input__section__modificar">
+                    <input type="text" id="prod_tachar" class="input__section__box" placeholder="Ingrese el Producto">
+                    <button onclick="tacharProducto()" class="input__section__button">Tachar Producto</button>
+                </div>
+                <div class="input__section__modificar">
+                    <input type="text" id="cat_eliminar" class="input__section__box" placeholder="Ingrese la Categoria">
+                    <button onclick="eliminarCategoria()" class="input__section__button">Eliminar Categoría</button>
+                    <input type="text" id="prod_eliminar" class="input__section__box" placeholder="Ingrese el Producto">
+                    <button onclick="eliminarProducto()" class="input__section__button">Eliminar Producto</button>
+                </div>
+            </section>
+    
+            <div class="notepad">
+                <h2 class="notepad__subtitulo">¡Aprovecha para que no se te olvide absolutamente nada!</h2>
+                <div class="notepad__listado__listas">
+                </div>
+            </div>
+        </div>
+    </main>
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
