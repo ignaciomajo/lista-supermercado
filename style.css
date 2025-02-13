@@ -13,28 +13,26 @@
     margin: 0;   
 }
 
-.header {
-    background-color: #000000;
-}
-
 body {
     background-image: url('assets/fondo3.png');
     background-size: 25rem 25rem;
     background-position: center;
     background-repeat: repeat;
-}
-
-.presentacion__listado {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;
+    padding: 1rem;
 }
+
+
 
 .presentacion__listado__titulo {
     font-family: var(--fuente);
+    width: 70%;
+    align-content: center;
+    align-items: center;
     font-size: 2.5rem;
     font-weight: 600;
     color: #F6F6F6;
@@ -43,7 +41,7 @@ body {
     border-color: #FFD95F;
     border-radius: 16px;
     padding: 0.25rem 0.5rem;
-    margin: 1rem;
+    margin: 2% 15%;
 
 }
 
@@ -51,16 +49,16 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .notepad {
     background-image: url('assets/pad3.png');
     background-size: cover;
     background-position: center;
-    width: 80vw;
+    width: 50rem;
     max-width: 800px;
-    height: 80vh;
+    height: 40rem;
     max-height: 600px;
     box-shadow: 10px 10px 30px #000000;
     padding: 30px;
@@ -174,6 +172,114 @@ body {
     font-weight: 500;
     margin: 1%;
     padding: 0.75%;
+    width: 90%;
     border: 2px solid #000000;
     border-radius: 16px;
+}
+
+
+.notepad__listado__listas h3 {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .presentacion__listado__titulo {
+        text-align: center;
+        width: 100%;
+        margin: 2% 0%;  
+        font-size: 1.5rem;
+        padding: 10px;
+        box-sizing: border-box;
+        white-space: nowrap; 
+        overflow: hidden; 
+    }
+
+    .notepad__inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: 100%;  
+        max-width: 500px;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .input__section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        align-items: center;
+        width: 100%;
+        gap: 8px;
+        padding: 0;
+    }
+
+    .input__section__box, .input__section__button {
+        width: 100%;  
+        max-width: 20rem;
+        height: 60%;
+        max-height: 3rem;
+        font-size: 1rem;
+        padding: 7px;
+        margin: 1% auto;
+        box-sizing: border-box;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .notepad {
+        width: 95%;
+        max-width: 600px;
+        height: 70rem;
+        padding: 12px;
+        background-color: #fff;
+        margin: 10px 2%;  
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+
+    .notepad__subtitulo {
+        text-align: left;
+        font-size: 1rem;
+        margin: 12% 0% 3% 6%;
+        width: 100%;
+    }
+
+    .notepad__listado__listas {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+        width: 100%;
+        gap: 12px; 
+        padding-top: 1rem;
+    }
+
+    .footer_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        max-width: 80%;  
+        font-size: 1rem;
+        margin: 2% 10%;
+        padding: 2px 0px;
+        box-sizing: border-box;
+    }
 }
