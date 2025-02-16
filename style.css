@@ -283,3 +283,53 @@ body {
         box-sizing: border-box;
     }
 }
+
+@media (max-width: 400px) {
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .presentacion__listado__titulo {
+        width: 95%;
+        font-size: 1.25rem;
+        padding: 8px;
+        margin: 2% auto;
+    }
+
+    .notepad {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .notepad__listado__listas {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 8px;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .input__section {
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 5px;
+    }
+
+    .input__section__box, .input__section__button {
+        width: 90%;
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .footer_text {
+        width: 95%;
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
