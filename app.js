@@ -122,53 +122,46 @@ function eliminarCategoria() {
     let inputCategoria = document.getElementById('cat_eliminar');
     let categoriaEliminar = inputCategoria.value.trim().toLowerCase();
 
-    if (!inputCategoria) {
+    if (!categoriaEliminar) {
         alert('Debes ingresar una categoría.');
         return;
     }
 
     let contenedorCategoria = document.querySelector(`.categoria__${categoriaEliminar}`);
-    console.log("Contenedor a eliminar:", contenedorCategoria)
-    console.log("Categoría ingresada:", categoriaEliminar);
 
     if (contenedorCategoria) {
         contenedorCategoria.remove();        
         listadoCategorias = listadoCategorias.filter(cat => cat.toLowerCase() !== categoriaEliminar);
-        return;
     }
 
     let lista = document.querySelectorAll('.notepad ul');
     let titulos = document.querySelectorAll('.notepad h3')
-    console.log("Cantidad de listas encontradas:", lista.length);
 
     let encontrado = false;
 
     lista.forEach(item => {
-        console.log("Clase del UL:", item.className);  // Depuración: ver clases de los <ul>
         let classItem = item.className.trim().toLowerCase();
         
-        if (classItem.split("__").includes(categoriaEliminar)) {  // Buscar la clase exacta
-            console.log("Se eliminará:", classItem);
+        if (classItem.split("__").includes(categoriaEliminar)) {  
+            
             item.remove();
             listadoCategorias = listadoCategorias.filter(cat => cat.toLowerCase() !== categoriaEliminar);
             encontrado = true;
         }
     });
 
-    titulos.forEach(item => {
-        console.log("Clase del UL:", item.className);  // Depuración: ver clases de los <ul>
+    titulos.forEach(item => {  
         let classItem = item.className.trim().toLowerCase();
         
-        if (classItem.split("__").includes(categoriaEliminar)) {  // Buscar la clase exacta
-            console.log("Se eliminará:", classItem);
+        if (classItem.split("__").includes(categoriaEliminar)) {  
             item.remove();
             encontrado = true;
+        } else if (!encontrado) {
+            alert('La categoría no existe.');
         }
     });
 
-    if (!encontrado) {
-        alert('La categoría no existe.');
-    }
+    
 
     limpiarCajaCategoriaEliminar();
 }
